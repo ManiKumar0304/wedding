@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation | Krishna & Radha</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="flower-container"></div>
+
+    <audio id="bg-music" loop>
+        <source src="divine-flute.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="mute-btn" class="mute-control">🔊</button>
+
+    <div id="opening-overlay" class="opening-overlay">
+        <div class="opening-content">
+            <img src="ganesh.png" alt="Ganesh" class="ganesh-img">
+            <h2 class="shlok">।। ॐ श्री गणेशाय नमः ।।</h2>
+            <button id="open-btn" class="open-btn">Open Me</button>
+            <p class="invite-label">A Divine Invitation</p>
+        </div>
+    </div>
+    <div id="invitation-container" class="invitation-container hidden">
+        
+        <div class="temple-header-section">
+            <header class="hero">
+                <p class="blessing-text">
+                    “Two hearts united, one beautiful journey begins.<br>
+                    Wishing you a lifetime of togetherness.”
+                </p>
+                <h1 class="main-title">Save The Date</h1>
+                <p class="wedding-date">December 25, 2026</p>
+                
+                <div class="invite-announcement">
+                    <p class="small-italic">Together with the blessings of their families</p>
+                    <h2 class="hero-couple-names">Krishna & Radha</h2>
+                    <p>Cordially invite you to celebrate their wedding</p>
+                </div>
+            </header>
+
+            <div class="about-couple-container">
+                <img src="wedding-icon.png" alt="Wedding Tradition" class="tradition-img">
+                <h2 class="section-title">About the Couple</h2>
+            </div>
+
+            <section class="couple-section">
+                <div class="couple-card">
+                    <div class="image-wrapper"><img src="radha.jpg" alt="Radha" class="profile-img"></div>
+                    <h2 class="couple-name">Radha</h2>
+                    <p class="parent-info">d/o vrishabhanu and kirti</p>
+                    <p class="role">The Bride</p>
+                </div>
+                <div class="heart-icon">❤</div>
+                <div class="couple-card">
+                    <div class="image-wrapper"><img src="krishna.jpg" alt="Krishna" class="profile-img"></div>
+                    <h2 class="couple-name">Krishna</h2>
+                    <p class="parent-info">s/o vasudeva and devaki</p>
+                    <p class="role">The Groom</p>
+                </div>
+            </section>
+        </div>
+
+        <div class="aesthetic-body-section">
+            <section class="gallery-section">
+                <h2 class="section-title">Pre-Wedding Moments</h2>
+                <div class="slider">
+                    <div class="slide-track" id="gallery-track">
+                        <img src="pre1.jpg" class="scroll-img" onclick="openLightbox();currentSlide(1)">
+                        <img src="pre2.jpg" class="scroll-img" onclick="openLightbox();currentSlide(2)">
+                        <img src="pre3.jpg" class="scroll-img" onclick="openLightbox();currentSlide(3)">
+                        <img src="pre4.jpeg" class="scroll-img" onclick="openLightbox();currentSlide(4)">
+                        <img src="pre5.jpg" class="scroll-img" onclick="openLightbox();currentSlide(5)">
+                        <img src="pre6.jpg" class="scroll-img" onclick="openLightbox();currentSlide(6)">
+                        <img src="pre7.jpg" class="scroll-img" onclick="openLightbox();currentSlide(7)">
+                        <img src="pre8.jpg" class="scroll-img" onclick="openLightbox();currentSlide(8)">
+                        <img src="pre9.jpg" class="scroll-img" onclick="openLightbox();currentSlide(9)">
+                        <img src="pre10.jpg" class="scroll-img" onclick="openLightbox();currentSlide(10)">
+                    </div>
+                </div>
+            </section>
+
+            <section class="countdown-section">
+                <h2 class="section-title">Counting Down to the Big Day</h2>
+                <div id="timer-display">
+                    <div class="time-box"><span id="days">00</span><p>Days</p></div>
+                    <div class="time-box"><span id="hours">00</span><p>Hours</p></div>
+                    <div class="time-box"><span id="mins">00</span><p>Mins</p></div>
+                    <div class="time-box"><span id="secs">00</span><p>Secs</p></div>
+                </div>
+            </section>
+
+            <section class="events">
+                <h2 class="section-title">Ceremonies</h2>
+                <div class="aligned-timeline">
+                    <div class="timeline-row">
+                        <div class="aligned-card"><div class="border-design"></div><h3>Haldi</h3><p>9:00 AM</p></div>
+                        <div class="aligned-card"><div class="border-design"></div><h3>Sangeeth</h3><p>7:00 PM</p></div>
+                    </div>
+                    <div class="timeline-row">
+                        <div class="aligned-card"><div class="border-design"></div><h3>Marriage</h3><p>10:30 AM</p></div>
+                        <div class="aligned-card"><div class="border-design"></div><h3>Dinner</h3><p>8:00 PM</p></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="location-container">
+                <h2 class="section-title">Venue & Location</h2>
+                <div class="location-flex-wrapper">
+                    <div class="location-details">
+                        <h3 class="venue-name">Sri Kalyanarama Mandapam</h3>
+                        <p class="venue-address">Balaji nagar, Hyderabad.<br>Venue Address, City, State</p>
+                        <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15263.522828601177!2d82.2366158871582!3d16.980417200000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3828f55204837d%3A0xf5153bbfcd6d1cba!2sG-Convention%20Hall%20Kakinada!5e0!3m2!1sen!2sin!4v1776764870300!5m2!1sen!2sin" target="_blank" class="navigate-btn">GET DIRECTIONS</a>
+                    </div>
+                    <div class="map-box">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15263.522828601177!2d82.2366158871582!3d16.980417200000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3828f55204837d%3A0xf5153bbfcd6d1cba!2sG-Convention%20Hall%20Kakinada!5e0!3m2!1sen!2sin!4v1776764870300!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div id="lightboxModal" class="modal">
+        <span class="close" onclick="closeLightbox()">×</span>
+        <div class="modal-content">
+            <div class="mySlides"><img src="pre1.jpg"></div>
+            <div class="mySlides"><img src="pre2.jpg"></div>
+            <div class="mySlides"><img src="pre3.jpg"></div>
+            <div class="mySlides"><img src="pre4.jpeg"></div>
+            <div class="mySlides"><img src="pre5.jpg"></div>
+            <div class="mySlides"><img src="pre6.jpg"></div>
+            <div class="mySlides"><img src="pre7.jpg"></div>
+            <div class="mySlides"><img src="pre8.jpg"></div>
+            <div class="mySlides"><img src="pre9.jpg"></div>
+            <div class="mySlides"><img src="pre10.jpg"></div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
