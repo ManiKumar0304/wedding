@@ -239,27 +239,35 @@ body {
 .slider {
     width: 100%;
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.3);
+    white-space: nowrap;
+    position: relative;
     padding: 20px 0;
 }
 
 .slide-track {
     display: flex;
-    gap: 15px;
-    animation: scroll 40s linear infinite;
+    width: max-content; /* This ensures the track grows with the images */
+    animation: scroll 30s linear infinite;
+}
+
+.slide-track:hover {
+    animation-play-state: paused;
 }
 
 .scroll-img {
     height: 200px;
     width: auto;
+    flex-shrink: 0; /* Prevents the browser from squashing your photos */
+    margin-right: 15px; /* Consistent gap */
     border: 2px solid var(--gold);
     cursor: pointer;
 }
 
 @keyframes scroll {
     0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-200px * 10)); }
+    100% { transform: translateX(-50%); } /* Animates only halfway through the doubled list */
 }
+
 
 /* Ceremonies Alignment */
 .aligned-timeline {
