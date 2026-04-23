@@ -1,14 +1,26 @@
 // Opening Logic
+function setupInfiniteScroll() {
+    const track = document.getElementById('gallery-track');
+    
+    // 1. Get the current images
+    const originalContent = track.innerHTML;
+    
+    // 2. Double the content (10 images become 20)
+    // This ensures that as the 10th image leaves, the 1st image is already entering
+    track.innerHTML = originalContent + originalContent;
+}
+
+// Ensure it is called in your button listener:
 document.getElementById('open-btn').addEventListener('click', function() {
+    setupInfiniteScroll(); // Call this FIRST
+    
     document.getElementById('opening-overlay').classList.add('overlay-hide');
     document.getElementById('invitation-container').classList.remove('hidden');
-    document.getElementById('invitation-container').classList.add('reveal');
-    
     document.getElementById('bg-music').play();
+    
     startFlowers();
     startCountdown();
 });
-
 // Mute Toggle
 const muteBtn = document.getElementById('mute-btn');
 const music = document.getElementById('bg-music');
